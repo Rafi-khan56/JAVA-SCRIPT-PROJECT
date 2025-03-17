@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+   
+       <form  id="frm">
+            <input type="text" name="" id="Fname">
+            <input type="password" name="" id="pass">
+            <h1 id="result"></h1>
+
+           <input type="submit" value="submit">
+       </form>
+
+    <script>
+        
+       var form = document.getElementById("frm");
+
+       form.onsubmit = function()
+       {
+            var user = [];
+            
+            user[0] = document.getElementById("Fname").value;
+            user [1]= document.getElementById("pass").value;
+            
+
+           if (user[0] == "rafi")
+           {
+                 if(user[1] == "123")
+                 {
+                       window.alert("Login Successfull");
+                 }
+                 else {
+                        window.alert("password is wrong");
+                 }      
+           }
+           else{
+                window.alert("Not Found");
+           }
+
+
+           }
+    </script>
+</body>
+</html>
