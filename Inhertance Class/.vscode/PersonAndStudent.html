@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person and Student Inheritance Class</title>
+</head>
+<body>
+    <h1>Person and Student Inheritance Class</h1>
+    <script>
+        class Person{
+            constructor(name, age, gender){
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+            PersonInfo(){
+                document.write(`Name:${this.name}, <br> age:${this.age}, <br> gender:${this.gender}<br> is Person information <br>`)
+            }
+        }
+
+        class Student extends Person{
+            constructor( name, age, gender,school, grade, rollno){
+                super(name, age, gender);
+
+                this.school = school;
+                this.grade = grade;
+                this.rollno = rollno; 
+                this.age = age;
+                this.name = name;
+                this.gender = gender;
+
+            }
+            StudentDtail(){
+                document.write(`Name:${this.name},<br> age:${this.age},<br> Gender:${this.gender} <br>`);
+                 document.write(`School:${this.school}, <br> Grade:${this.grade}, <br> Rollno:${this.rollno}<br>is Student detail <br> `);
+            }
+            }
+             let result = new Student( "Rafi", 23, "Male" , "The country School", "A" , "male");
+             result.StudentDtail();
+             result.PersonInfo();
+
+        
+    </script>
+    
+</body>
+</html>

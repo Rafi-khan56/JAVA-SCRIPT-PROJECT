@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle → Car Inhertance Class</title>
+</head>
+<body>
+    <h2>Vehicle → Car Inhertance Class</h2>
+    <script>
+        class Vehicle{
+            constructor(brand, model, year){
+             
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+            info(){
+                document.write(`Brand: ${this.brand} <br>, Model: ${this.model}<br> , Year:${this.year}<br>`);
+            }
+        }
+
+        class Car extends Vehicle{
+            constructor(brand, model, year,fuelType, transmission){
+                super(brand, model, year);
+
+                this.fuelType = fuelType;
+                this.transmission = transmission;
+                 this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+            CarDetail(){
+                
+                document.write(`Brand: ${this.brand} <br>, Model: ${this.model}<br> , Year:${this.year}<br>`);
+                document.write(`FuelType: ${this.fuelType}, <br> Transmission: ${this.transmission}<br> `);
+            }
+        }
+         let result = new Car("Honda", "Civic", "2025", "Petrol", "Automatic");
+         result.CarDetail();
+         
+    </script>
+    
+</body>
+</html>

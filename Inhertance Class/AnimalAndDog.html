@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inhertance Class of Animal and dog</title>
+</head>
+
+<body>
+    <h1>Inhertance Class of Animal and dog</h1>
+
+    <script>
+
+        class Animal {
+            constructor(name, type) {
+                this.name = name;
+                this.type = type;
+            }
+            info() {
+                document.write(`Name: ${this.name}, Type: ${this.type}`);
+            }
+        }
+
+        class Dog extends Animal {
+            constructor(name, breed,  type , color) {
+                super(name, type);
+
+                this.breed = breed;
+                this.color = color;
+                this.name = name;
+                this.type = type;
+            }
+            detailDog() {
+                document.write(`Name: ${this.name} <br>`);
+                document.write(`Type: ${this.type} <br> `);
+                document.write(`Breed: ${this.breed}  <br>`);
+                document.write(`Color: ${this.color}  <br>`);
+            }
+        }
+        let result = new Dog("Tomy", "Mammal", "German", "Black");
+        result.detailDog();
+    </script>
+
+</body>
+
+</html>

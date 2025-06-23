@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human class</title>
+</head>
+<body>
+    <h1>Java Script</h1>
+
+    <script>
+
+       class Human {
+        constructor(gender , nationality){
+            this.gender = gender;
+            this.nationality = nationality;
+        }
+        identity(){
+               document.write(`Gender: ${this.gender}, Nationality: ${this.nationality} identity`);
+        }
+       }
+
+       class Person extends Human {
+        constructor (name, age, gender , nationality){
+            super(gender, nationality);
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.nationality = nationality;
+    
+        }
+          speak(){
+        document.write(`,Name: ${this.name},  age: ${this.age} is speaking`);
+          }
+       }
+
+       let display = new Person("Rafi khan" , 21, "Male", "Pakistani", );
+       display.identity();
+       display.speak();
+            
+
+            
+             
+
+        
+
+    </script>
+</body>
+</html>
