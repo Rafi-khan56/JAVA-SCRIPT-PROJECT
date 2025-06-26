@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan alphabit Generator Function </title>
+</head>
+<body>
+    <script>
+
+      function* StringValue(latter)
+      {
+         for (let i = 0; i < latter.length; i++){
+            yield latter[i];
+         }
+      }
+      let result = StringValue("Pakistan");
+      document.write("Pakistan"+"<br>");
+       document.write(result.next().value+"<br>");
+       document.write(result.next().value+"<br>");
+       document.write(result.next().value+"<br>");
+       document.write(result.next().value+"<br>");
+       document.write(result.next().value+"<br>");
+       document.write(result.next().value+"<br>");
+       document.write(result.next().value+"<br>");
+       document.write(result.next().value);
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Table through Generator Function</title>
+</head>
+
+<body>
+    <h1>Print 5 table </h1>
+
+    <script>
+        function* table(num) {
+            yield `5 x 1 = ${1 * num}`;
+            yield `5 x 2 = ${2 * num}`;
+            yield `5 x 3 = ${3 * num}`;
+            yield `5 x 4 = ${4 * num}`;
+            yield `5 x 5 = ${5 * num}`;
+            yield `5 x 6 = ${6 * num}`;
+            yield `5 x 7 = ${7 * num}`;
+            yield `5 x 8 = ${8 * num}`;
+            yield `5 x 9 = ${9 * num}`;
+            yield `5 x 10 = ${10 * num}`;
+        }
+        let number = table(5);
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+        document.write(number.next().value + "<br>");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print 1 to 5 number through Generator Function</title>
+</head>
+<body>
+    <script>
+        function*  number()
+        {
+            yield 1;
+            yield 2;
+            yield 3;
+            yield 4;
+            yield 5;
+        }
+       
+        for (let num of number()){
+            document.write(num);
+        }
+    </script>
+    </script>
+</body>
+</html>
