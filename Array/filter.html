@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("Q1 Pri`nt number should be grater then 5 <br>");
+        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var result = numbers.filter(num => num > 5)
+        document.write(result);
+
+        document.write("<br> <br>");
+        document.write("Q2 find even Number <br> ");
+
+        var number = [2, 3, 4, 5, 6, 7, 66, 5, 43, 8, 90];
+        var result = number.filter(num => num % 2 === 0);
+        document.write(result);
+
+        document.write("<br> <br>");
+        document.write("Q3 find odd Number <br> ");
+
+        var num = [1, 2, 3, 4, 5, 6, 6, 7, 7, 89,];
+        var result = num.filter(number => number % 2 === 1);
+        document.write(result);
+
+        document.write(" <br> <br>");
+        document.write("Q4 find Negative Numbers <br>");
+
+        var number = [0, -2, -1, 4, -5, 7, -9, -4, -5];
+        var result = number.filter(num => num < 0);
+        document.write(result);
+
+        document.write(" <br> <br>");
+        document.write("Q5 find Numbers Between 20 and 40 <br>");
+
+        var number = [1, 2, 4, 56, 20, 21, 23, 24, 26, 30, 34, 37, 39, 40, 50];
+        var result = number.filter(num => num > 20 && num < 40);
+        document.write(result);
+
+        document.write(" <br> <br>");
+        document.write("Q6 find  Multiples of 5  <br>");
+
+        var numbers = [1, 3, 5, 10, 25, 34, 35];
+        var result = numbers.filter(num => num % 5 === 0);
+        document.write(result);
+
+        document.write(" <br> <br>");
+        document.write("Q7 find  Prime Numbers  <br>");
+          
+        function primeNum(num){
+            if (num <= 1) return false;
+            for (let i=2; i <= Math.sqrt(num); i++){
+                if (num % i===0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        var number =[2, 4, 5, 9, 11];
+        var result = number.filter(primeNum);
+        document.write(result);
+
+         
+        document.write(" <br> <br>");
+        document.write("Q8 find  square of number  <br>");
+
+        var number = [14,13,34,25,36,9,10];
+        var perfectSquare = number.filter(function(num){
+            return Math.sqrt(num)%1===0;
+        });
+        document.write(perfectSquare);
+
+         document.write(" <br> <br>");
+        document.write("Q9 find  Zeros Only <br>");
+
+        var zero = [1,2,3,4,0,0,0];
+        var Zero_Number = zero.filter(num => num===0);
+        document.write(Zero_Number);
+
+         document.write(" <br> <br>");
+        document.write("Q10 print Duplicates number from array <br>");
+
+        var number = [2,2,3,3,5,6,6,77,77,9,0,5];
+        var Duplicates_Number = number.filter((num, index, array)=>{
+            return  array.indexOf(num) !== array.lastIndexOf(num);
+        });
+        document.write(Duplicates_Number);
+
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
